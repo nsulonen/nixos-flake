@@ -1,7 +1,7 @@
 { ... }:
 
 {
-  networking.networkmanager.ensrueProfiles = {
+  networking.networkmanager.ensureProfiles = {
     "SAMK-STUDENT" = {
       type = "wifi";
       interface-name = "wlp4s0";
