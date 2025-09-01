@@ -6,8 +6,11 @@
   #home.packages
   home.packages = with pkgs; [
 
-    #software
+    #pkm
     obsidian
+
+    #text editor
+    typora
 
     #tools
     devenv
