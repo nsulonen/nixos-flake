@@ -39,7 +39,7 @@
       laptop = {
         output = [ "eDP-1" ];
         layer = "top";
-        position = "right";
+        position = "left";
         spacing = 4;
 
         modules-left = [ "niri/workspaces" ];
