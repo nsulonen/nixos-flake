@@ -68,6 +68,10 @@
       extensions = [ "nix" ];
     };
 
+    vscode = {
+      enable = true;
+    };
+
     ghostty = {
       enable = true;
 
