@@ -24,6 +24,9 @@
     #file management
     nautilus
 
+    #vpn
+    openvpn3
+
   ];
 
   #programs
