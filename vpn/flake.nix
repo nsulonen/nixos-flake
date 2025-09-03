@@ -11,5 +11,7 @@
       devShells.x86_64-linux.default = nixpkgs.legacyPackages.x86_64-linux.mkShell {
         buildInputs = [ nixpkgs.legacyPackages.x86_64-linux.openvpn3 ];
       };
+
+      packages.x86_64-linux.default = nixpkgs.legacyPackages.x86_64-linux.hello;
     };
 }
