@@ -10,8 +10,18 @@
   boot.loader.efi.canTouchEfiVariables = true;
 
   #networking
-  networking.hostName = "nixos";
-  networking.networkmanager.enable = true;
+  networking = {
+
+    hostName = "nixos";
+
+    networkmanager = {
+      enable = true;
+      plugins = with pkgs; [
+        networkmanager-openvpn
+      ];
+    };
+
+  };
 
   #locale
   time.timeZone = "Europe/Helsinki";
