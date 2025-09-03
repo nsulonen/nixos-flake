@@ -91,5 +91,9 @@
     fuzzel = {
       enable = true;
     };
+
+    freetube = {
+      enable = true;
+    };
   };
 }
