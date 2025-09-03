@@ -23,6 +23,11 @@
 
   };
 
+  services.dbus.packages = with pkgs; [
+    networkmanager
+    openvpn3
+  ];
+
   #locale
   time.timeZone = "Europe/Helsinki";
   i18n.defaultLocale = "en_US.UTF-8";
