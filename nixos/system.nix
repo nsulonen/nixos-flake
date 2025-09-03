@@ -2,7 +2,7 @@
 
 {
   imports = [
-    #./modules/samk.nix
+    ./modules/samk.nix
   ];
 
   #bootloader
