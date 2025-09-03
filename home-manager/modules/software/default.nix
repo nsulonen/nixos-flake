@@ -25,7 +25,7 @@
     nautilus
 
     #vpn
-    openvpn3
+    #openvpn3
 
   ];
 
