@@ -23,10 +23,13 @@
 
   };
 
-  services.dbus.packages = with pkgs; [
-    networkmanager
-    openvpn3
-  ];
+  services = {
+    resolved.enable = true;
+    dbus.packages = with pkgs; [
+      networkmanager
+      openvpn3
+    ];
+  };
 
   #locale
   time.timeZone = "Europe/Helsinki";
