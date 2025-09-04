@@ -85,6 +85,7 @@
     git
     vim
     wget
+    openvpn3
   ];
 
   nixpkgs.config.allowUnfree = true;
