@@ -24,7 +24,9 @@
   };
 
   services = {
+    #lets vpn client to install its own DNS rules
     resolved.enable = true;
+
     dbus.packages = with pkgs; [
       networkmanager
       openvpn3
