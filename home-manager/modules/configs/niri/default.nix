@@ -101,6 +101,8 @@
     ];
 
     environment = {
+      ELECTRON_ENABLE_WAYLAND = "1";
+      MOZ_ENABLE_WAYLAND = "1";
       QT_QPA_PLATFORM = "wayland";
       NIXOS_OZONE_WL = "1";
       DISPLAY = ":0";
