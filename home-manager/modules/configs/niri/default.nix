@@ -108,6 +108,10 @@
       DISPLAY = ":0";
     };
 
+    debug = {
+      render-drm-device = "/dev/dri/renderD128";
+    };
+
     prefer-no-csd = true;
 
     window-rules = [
