@@ -6,7 +6,6 @@
   #home.packages
   home.packages = with pkgs; [
 
-    #pkm
     obsidian
 
     #text editor
@@ -20,6 +19,7 @@
     #lsp
     nixd
     nil
+    pylsp
 
     #file management
     nautilus
