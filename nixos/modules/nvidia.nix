@@ -1,4 +1,4 @@
-{ config, ... }:
+{ config, pkgs, ... }:
 
 {
   hardware.nvidia = {
@@ -16,6 +16,11 @@
   #enable wlr portal for nvidia screencasting
   xdg.portal = {
     enable = true;
+    config = {
+      common = {
+        default = "wlr";
+      };
+    };
 
     wlr = {
       enable = true;
@@ -25,5 +30,10 @@
         };
       };
     };
+
+    extraPortals = [
+      pkgs.xdg-desktop-portal-wlr
+    ];
+
   };
 }
