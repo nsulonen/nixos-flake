@@ -24,8 +24,12 @@
     #file management
     nautilus
 
-    #vpn
-    #openvpn3
+    #media player
+    vlc
+
+    #screen recording
+    wf-recorder
+    slurp
 
   ];
 
