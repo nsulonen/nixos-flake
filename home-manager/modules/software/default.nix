@@ -19,7 +19,7 @@
     #lsp
     nixd
     nil
-    pylsp
+    python313Packages.python-lsp-server
 
     #file management
     nautilus
