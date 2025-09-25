@@ -26,6 +26,7 @@
 
     #media player
     vlc
+    grayjay
 
     #screen recording
     wf-recorder
