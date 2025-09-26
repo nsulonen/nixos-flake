@@ -5,7 +5,7 @@
 
   #home.packages
   home.packages = with pkgs; [
-
+    #knowledge management
     obsidian
 
     #text editor
@@ -15,6 +15,7 @@
     devenv
     swaybg
     xwayland-satellite
+    bottles
 
     #lsp
     nixd
