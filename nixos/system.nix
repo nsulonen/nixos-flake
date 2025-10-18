@@ -26,6 +26,7 @@
   services = {
     #lets vpn client to install its own DNS rules
     resolved.enable = true;
+    flatpak.enable = true;
 
     dbus.packages = with pkgs; [
       networkmanager
