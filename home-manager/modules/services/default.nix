@@ -12,6 +12,10 @@
     mako = {
       enable = true;
     };
+
+    flatpak = {
+      enable = true;
+    };
   };
 
   systemd.user.startServices = "sd-switch";
