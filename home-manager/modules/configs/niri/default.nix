@@ -259,8 +259,8 @@
 
       "Mod+W".action = toggle-column-tabbed-display;
 
-      "Print".action = screenshot;
-      "Alt+Print".action = screenshot-window;
+      # "Print".action = screenshot;
+      # "Alt+Print".action = screenshot-window;
 
       "Mod+Escape" = {
         allow-inhibiting = false;
