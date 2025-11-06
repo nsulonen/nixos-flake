@@ -21,6 +21,7 @@
     nixd
     nil
     python313Packages.python-lsp-server
+    omnisharp-roslyn
 
     #file management
     nautilus
