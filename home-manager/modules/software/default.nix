@@ -62,10 +62,10 @@
 
     git = {
       enable = true;
-      userName = "nsulonen";
-      userEmail = "niko.sulonen@proton.me";
-      extraConfig = {
+      settings = {
         init.defaultBranch = "main";
+        user.name = "nsulonen";
+        user.email = "niko.sulonen@proton.me";
       };
     };
 
