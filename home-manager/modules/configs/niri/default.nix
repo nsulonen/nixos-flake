@@ -60,7 +60,7 @@
 
     layout = {
 
-      gaps = 0;
+      gaps = 8;
 
       center-focused-column = "never";
 
