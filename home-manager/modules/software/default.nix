@@ -105,5 +105,9 @@
     freetube = {
       enable = true;
     };
+
+    noctalia-shell = {
+      enable = true;
+    };
   };
 }
