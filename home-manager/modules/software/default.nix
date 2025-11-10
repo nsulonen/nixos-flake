@@ -34,6 +34,8 @@
     wf-recorder
     slurp
 
+    #shell
+
   ];
 
   #programs
@@ -107,6 +109,10 @@
     };
 
     noctalia-shell = {
+      enable = true;
+    };
+
+    quickshell = {
       enable = true;
     };
   };
