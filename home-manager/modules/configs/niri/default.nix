@@ -85,19 +85,20 @@
     };
 
     spawn-at-startup = [
-      { command = [ "waybar" ]; }
+      # { command = [ "waybar" ]; }
+      { command = [ "noctalia-shell" ]; }
       { command = [ "xwayland-satellite" ]; }
-      {
-        command = [
-          "swaybg"
-          "-o"
-          "*"
-          "-i"
-          "/home/niko/System/home-manager/walls/ripples.png"
-          "-m"
-          "fill"
-        ];
-      }
+      #{
+      #  command = [
+      #    "swaybg"
+      #    "-o"
+      #    "*"
+      #    "-i"
+      #    "/home/niko/System/home-manager/walls/ripples.png"
+      #    "-m"
+      #    "fill"
+      #  ];
+      #}
     ];
 
     environment = {
