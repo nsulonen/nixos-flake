@@ -150,7 +150,8 @@
     binds = with config.lib.niri.actions; {
 
       "Mod+T".action = spawn "ghostty";
-      "Mod+D".action = spawn "fuzzel";
+      #"Mod+D".action = spawn "fuzzel";
+      "Mod+D".action = spawn "noctalia-shell" "ipc" "call" "launcher" "toggle";
       "Mod+Alt+L".action = spawn "swaylock";
 
       "XF86AudioRaiseVolume".action = spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.1+";
