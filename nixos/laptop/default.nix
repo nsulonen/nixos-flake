@@ -12,4 +12,12 @@
     brightnessctl
   ];
 
+  #services
+  services = {
+    power-power-profiles-daemon.enable = true;
+    upower.enable = true;
+  };
+
+  #bluetooth
+  hardware.bluetooth.enable = true;
 }
