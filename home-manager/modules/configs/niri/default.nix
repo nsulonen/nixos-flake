@@ -82,7 +82,19 @@
       };
 
       shadow.enable = true;
+
+      # for stationary wallpaper in overview
+      background-color = "transparent";
     };
+
+    layer-rules = [
+      {
+        matches = [
+          { namespace = "^noctalia-wallpaper*"; }
+        ];
+        place-within-backdrop = true;
+      }
+    ];
 
     spawn-at-startup = [
       # { command = [ "waybar" ]; }
