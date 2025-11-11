@@ -9,6 +9,9 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
+  #power management
+  powerManagement.enable = true;
+
   #networking
   networking = {
 
