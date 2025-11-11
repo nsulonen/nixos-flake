@@ -152,15 +152,21 @@
       "Mod+T".action = spawn "ghostty";
       #"Mod+D".action = spawn "fuzzel";
       "Mod+D".action = spawn "noctalia-shell" "ipc" "call" "launcher" "toggle";
-      "Mod+Alt+L".action = spawn "swaylock";
+      "Mod+L".action = spawn "noctalia-shell" "ipc" "call" "lockScreen" "lock";
+      "Mod+Shift+L".action = spawn "noctalia-shell" "ipc" "call" "sessionMenu" "toggle";
+      "Mod+Space".action = spawn "noctalia-shell" "ipc" "call" "controlCenter" "toggle";
+      "Mod+Return".action = spawn "noctalia-shell" "ipc" "call" "settings" "toggle";
 
-      "XF86AudioRaiseVolume".action = spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.1+";
-      "XF86AudioLowerVolume".action = spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.1-";
-      "XF86AudioMute".action = spawn "wpctl" "set-mute" "@DEFAULT_AUDIO_SINK@" "toggle";
-      "XF86AudioMicMute".action = spawn "wpctl" "set-mute" "@DEFAULT_AUDIO_SOURCE@" "toggle";
-      "XF86AudioPlay".action = spawn "playerctl" "play-pause";
-      "XF86AudioNext".action = spawn "playerctl" "next";
-      "XF86AudioPrev".action = spawn "playerctl" "previous";
+      "XF86AudioRaiseVolume".action = spawn "noctalia-shell" "ipc" "call" "volume" "increase";
+      "XF86AudioLowerVolume".action = spawn "noctalia-shell" "ipc" "call" "volume" "decrease";
+      "XF86AudioMute".action = spawn "noctalia-shell" "ipc" "call" "volume" "muteOutput";
+      #"XF86AudioMicMute".action = spawn "wpctl" "set-mute" "@DEFAULT_AUDIO_SOURCE@" "toggle";
+      "XF86AudioPlay".action = spawn "noctalia-shell" "ipc" "call" "media" "playPause";
+      "XF86AudioNext".action = spawn "noctalia-shell" "ipc" "call" "media" "next";
+      "XF86AudioPrev".action = spawn "noctalia-shell" "ipc" "call" "media" "previous";
+
+      "XF86MonBrightnessUp".action = spawn "noctalia-shell" "ipc" "call" "brightness" "increase";
+      "XF86MonBrightnessDown".action = spawn "noctalia-shell" "ipc" "call" "brightness" "decrease";
 
       "Mod+O" = {
         repeat = false;
