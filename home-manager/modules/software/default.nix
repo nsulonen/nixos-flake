@@ -93,15 +93,15 @@
     };
 
     swaylock = {
-      enable = true;
+      enable = false;
     };
 
     waybar = {
-      enable = true;
+      enable = false;
     };
 
     fuzzel = {
-      enable = true;
+      enable = false;
     };
 
     freetube = {
@@ -113,6 +113,10 @@
     };
 
     quickshell = {
+      enable = true;
+    };
+
+    gemini-cli = {
       enable = true;
     };
   };
