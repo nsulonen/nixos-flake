@@ -14,6 +14,7 @@
 
   #services
   services = {
+    tuned.enable = true;
     power-profiles-daemon.enable = true;
     upower.enable = true;
   };
