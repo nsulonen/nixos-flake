@@ -21,4 +21,11 @@
 
   #bluetooth
   hardware.bluetooth.enable = true;
+
+  #enable zram
+  zramSwap = {
+    enable = true;
+    algorithm = "zstd";
+    memoryPercent = 50;
+  };
 }
