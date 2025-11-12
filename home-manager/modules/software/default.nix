@@ -119,5 +119,10 @@
     gemini-cli = {
       enable = true;
     };
+
+    starship = {
+      enable = true;
+      enableBashIntegration = true;
+    };
   };
 }
