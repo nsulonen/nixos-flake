@@ -91,6 +91,7 @@
     vim
     wget
     openvpn3
+    linux-firmware
   ];
 
   nixpkgs.config.allowUnfree = true;
