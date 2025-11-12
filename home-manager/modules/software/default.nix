@@ -124,5 +124,9 @@
       enable = true;
       enableBashIntegration = true;
     };
+
+    bash = {
+      enable = true;
+    };
   };
 }
