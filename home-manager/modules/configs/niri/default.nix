@@ -142,6 +142,11 @@
           bottom-left = 8.0;
         };
         clip-to-geometry = true;
+        draw-border-with-background = false;
+      }
+      {
+        matches = [ { app-id = "com.mitchellh.ghostty"; } ];
+        opacity = 0.9;
       }
     ];
 
