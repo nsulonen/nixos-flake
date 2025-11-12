@@ -13,8 +13,10 @@
   powerManagement.enable = true;
   powerManagement.cpuFreqGovernor = "schedutil";
 
+  #packages
   environment.systemPackages = with pkgs; [
-    brightnessctl
+    #brightnessctl
+    mesa
   ];
 
   #services
