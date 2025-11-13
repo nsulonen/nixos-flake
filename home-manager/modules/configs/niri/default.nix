@@ -61,17 +61,17 @@
     layout = {
 
       gaps = 16;
-
+      always-center-single-column = true;
       center-focused-column = "never";
 
       preset-column-widths = [
-        { proportion = 2. / 3.; }
+        #{ proportion = 2. / 3.; }
         { proportion = 1. / 2.; }
-        { proportion = 1. / 3.; }
+        #{ proportion = 1. / 3.; }
       ];
 
       default-column-width = {
-        proportion = 1. / 1.;
+        proportion = 1. / 2.;
       };
 
       focus-ring.enable = false;
@@ -262,8 +262,8 @@
       "Mod+Ctrl+8".action = move-column-to-index 8;
       "Mod+Ctrl+9".action = move-column-to-index 9;
 
-      "Mod+BracketLeft".action = consume-or-expel-window-left;
-      "Mod+BracketRight".action = consume-or-expel-window-right;
+      "Mod+J".action = consume-or-expel-window-left;
+      "Mod+K".action = consume-or-expel-window-right;
 
       "Mod+Comma".action = consume-window-into-column;
 
