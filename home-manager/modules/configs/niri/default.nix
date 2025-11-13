@@ -41,8 +41,8 @@
         };
 
         position = {
-          x = 1080;
-          y = 480;
+          x = 0;
+          y = 0;
         };
       };
 
@@ -52,8 +52,8 @@
         transform.rotation = 270;
 
         position = {
-          x = 0;
-          y = 0;
+          x = -1080;
+          y = -240;
         };
       };
     };
