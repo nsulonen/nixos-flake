@@ -50,7 +50,7 @@
     };
 
     #login manager
-    displayManager.gdm.enable = true;
+    #displayManager.gdm.enable = true;
   };
 
   #graphics
