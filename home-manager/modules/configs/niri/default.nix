@@ -282,8 +282,8 @@
       "Mod+U".action = set-column-width "-10%";
       "Mod+I".action = set-column-width "+10%";
 
-      "Mod+Shift+Minus".action = set-window-height "-10%";
-      "Mod+Shift+Equal".action = set-window-height "+10%";
+      "Mod+Shift+U".action = set-window-height "-10%";
+      "Mod+Shift+I".action = set-window-height "+10%";
 
       "Mod+V".action = toggle-window-floating;
       "Mod+Shift+V".action = switch-focus-between-floating-and-tiling;
