@@ -145,8 +145,8 @@
         draw-border-with-background = false;
       }
       {
-        matches = [ { app-id = "com.mitchellh.ghostty"; } ];
-        opacity = 0.9;
+        matches = [ { app-id = "kitty"; } ];
+        opacity = 0.95;
       }
     ];
 
@@ -154,7 +154,7 @@
 
     binds = with config.lib.niri.actions; {
 
-      "Mod+T".action = spawn "ghostty";
+      "Mod+T".action = spawn "kitty";
       #"Mod+D".action = spawn "fuzzel";
       "Mod+D".action = spawn "noctalia-shell" "ipc" "call" "launcher" "toggle";
       "Mod+L".action = spawn "noctalia-shell" "ipc" "call" "lockScreen" "lock";
