@@ -64,6 +64,16 @@
 
     helix = {
       enable = true;
+      settings = {
+        editor = {
+          line-number = "relative";
+          lsp.display-messages = true;
+        };
+        keys.normal = {
+          space.w = ":w";
+          space.q = ":q";
+        };
+      };
     };
 
     kitty = {
