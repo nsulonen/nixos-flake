@@ -1,8 +1,11 @@
 { pkgs, ... }:
 
 {
-  # enable theming for zen-browser
-  stylix.targets.zen-browser.profileNames = [ "default" ];
+  # enable theming for targets
+  stylix.targets = {
+    zen-browser.profileNames = [ "default" ];
+    ghostty.enable = true;
+  };
 
   stylix = {
     cursor = {
