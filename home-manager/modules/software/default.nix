@@ -8,14 +8,11 @@
     #knowledge management
     obsidian
 
-    #text editor
-    typora
-
     #tools
     devenv
-    swaybg
     xwayland-satellite
     bottles
+    wl-clipboard
 
     #lsp
     nixd
@@ -34,8 +31,6 @@
     wf-recorder
     slurp
 
-    #shell
-
   ];
 
   #programs
@@ -43,10 +38,6 @@
 
     distrobox = {
       enable = true;
-    };
-
-    firefox = {
-      enable = false;
     };
 
     zen-browser = {
@@ -71,22 +62,12 @@
       };
     };
 
-    neovim = {
-      enable = true;
-    };
-
-    zed-editor = {
-      enable = true;
-      extensions = [ "nix" ];
-    };
-
-    vscode = {
+    helix = {
       enable = true;
     };
 
     ghostty = {
       enable = true;
-
       settings = {
         window-padding-x = 20;
       };
