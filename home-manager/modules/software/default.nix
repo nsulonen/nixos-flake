@@ -48,8 +48,6 @@
 
     noctalia-shell.enable = true;
 
-    quickshell.enable = true;
-
     gh = {
       enable = true;
       hosts = {
@@ -82,10 +80,10 @@
       };
     };
 
-    kitty = {
+    alacritty = {
       enable = true;
       settings = {
-        window_padding_width = "0 20";
+        window.padding.x = 20;
       };
     };
 
