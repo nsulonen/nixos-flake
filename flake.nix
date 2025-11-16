@@ -33,10 +33,6 @@
       inputs.nixpkgs.follows = "nixpkgs";
       inputs.quickshell.follows = "quickshell"; # Use same quickshell version
     };
-    solaar = {
-      url = "github:Svenum/Solaar-Flake/main";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
   };
 
   outputs =
@@ -47,7 +43,6 @@
       zen-browser,
       home-manager,
       noctalia,
-      solaar,
       ...
     }@inputs:
     let
@@ -60,7 +55,6 @@
             systemConfigFile
             stylix.nixosModules.stylix
             niri.nixosModules.niri
-            solaar.nixosModules.default
             home-manager.nixosModules.home-manager
             {
               home-manager = {
