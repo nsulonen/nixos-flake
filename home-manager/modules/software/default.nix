@@ -93,6 +93,7 @@
     starship = {
       enable = true;
       enableBashIntegration = true;
+      settings = pkgs.lib.importTOML ../configs/starship.toml;
     };
   };
 }
