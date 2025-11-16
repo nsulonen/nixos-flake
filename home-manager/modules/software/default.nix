@@ -36,13 +36,19 @@
   #programs
   programs = {
 
-    distrobox = {
-      enable = true;
-    };
+    bash.enable = true;
 
-    zen-browser = {
-      enable = true;
-    };
+    discord.enable = true;
+
+    distrobox.enable = true;
+
+    zen-browser.enable = true;
+
+    freetube.enable = true;
+
+    noctalia-shell.enable = true;
+
+    quickshell.enable = true;
 
     gh = {
       enable = true;
@@ -83,30 +89,6 @@
       };
     };
 
-    swaylock = {
-      enable = false;
-    };
-
-    waybar = {
-      enable = false;
-    };
-
-    fuzzel = {
-      enable = false;
-    };
-
-    freetube = {
-      enable = true;
-    };
-
-    noctalia-shell = {
-      enable = true;
-    };
-
-    quickshell = {
-      enable = true;
-    };
-
     gemini-cli = {
       enable = true;
     };
@@ -114,10 +96,6 @@
     starship = {
       enable = true;
       enableBashIntegration = true;
-    };
-
-    bash = {
-      enable = true;
     };
   };
 }
