@@ -35,8 +35,8 @@
   #programs
   programs = {
 
-    bash.enable = true;
-
+    fish.enable = true;
+    
     discord.enable = true;
 
     distrobox.enable = true;
@@ -92,8 +92,9 @@
 
     starship = {
       enable = true;
-      enableBashIntegration = true;
-      settings = pkgs.lib.importTOML ../configs/starship.toml;
+      enableFishIntegration = true;
+      enableTransience = true;
+      # settings = pkgs.lib.importTOML ../configs/starship.toml;
     };
   };
 }

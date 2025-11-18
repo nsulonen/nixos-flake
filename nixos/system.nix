@@ -68,6 +68,7 @@
   #users
   users = {
     users.niko = {
+      shell = pkgs.fish;
       isNormalUser = true;
       extraGroups = [ "wheel" ];
     };
@@ -85,6 +86,9 @@
     ];
   };
 
+  # shell
+  programs.fish.enable = true;
+  
   #packages
   environment.systemPackages = with pkgs; [
     git
