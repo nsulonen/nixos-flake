@@ -4,7 +4,6 @@
   # enable theming for targets
   stylix.targets = {
     zen-browser.profileNames = [ "default" ];
-    ghostty.enable = true;
   };
 
   stylix = {
