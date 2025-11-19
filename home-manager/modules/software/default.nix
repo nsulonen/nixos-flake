@@ -47,6 +47,11 @@
 
     noctalia-shell.enable = true;
 
+    direnv = {
+      enable = true;
+      enableFishIntegration = true;
+    };
+    
     gh = {
       enable = true;
       hosts = {
