@@ -87,7 +87,9 @@
   };
 
   # shell
-  programs.fish.enable = true;
+  programs = {
+    fish.enable = true;
+  };
   
   #packages
   environment.systemPackages = with pkgs; [

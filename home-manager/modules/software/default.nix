@@ -49,9 +49,9 @@
 
     direnv = {
       enable = true;
-      enableFishIntegration = true;
+      nix-direnv.enable = true;
     };
-    
+       
     gh = {
       enable = true;
       hosts = {
