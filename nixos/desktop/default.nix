@@ -1,4 +1,4 @@
-{ ... }:
+{ pkgs, ... }:
 
 {
   imports = [
@@ -16,6 +16,10 @@
       enableGraphical = true;
     };
   };
+
+  environment.systemPackages = with pkgs; [
+    heroic
+  ];
 
   # to prevent uncontrolled wakeup from suspend, but seems to work without now
   # services.udev.extraRules = ''
