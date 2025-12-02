@@ -11,6 +11,9 @@
 
   #networking
   networking = {
+    hosts = {
+      "10.223.88.150" = [ "www.edu.samk.eu" ];
+    };
 
     hostName = "nixos";
 
