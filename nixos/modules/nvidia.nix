@@ -3,7 +3,7 @@
 {
   hardware.nvidia = {
     modesetting.enable = true;
-    powerManagement.enable = false;
+    powerManagement.enable = true; # for system suspend to work
     powerManagement.finegrained = false;
 
     open = true;
