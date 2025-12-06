@@ -14,6 +14,7 @@
     bottles
     wl-clipboard
     protontricks
+    protonup-qt
 
     #lsp
     nixd
