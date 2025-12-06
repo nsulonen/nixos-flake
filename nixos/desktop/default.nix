@@ -19,6 +19,7 @@
 
   environment.systemPackages = with pkgs; [
     heroic
+    cudaPackages.cudatoolkit
   ];
 
   # to prevent uncontrolled wakeup from suspend, but seems to work without now
