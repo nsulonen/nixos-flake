@@ -13,6 +13,7 @@
     xwayland-satellite
     bottles
     wl-clipboard
+    protontricks
 
     #lsp
     nixd
