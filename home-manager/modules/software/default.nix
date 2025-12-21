@@ -69,6 +69,7 @@
         init.defaultBranch = "main";
         user.name = "nsulonen";
         user.email = "niko.sulonen@proton.me";
+        core.editor = "hx";
       };
     };
 
