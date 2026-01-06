@@ -26,8 +26,7 @@
 
     #media player
     vlc
-    grayjay
-
+    
     #screen recording
     wf-recorder
     slurp
@@ -47,7 +46,10 @@
 
     freetube.enable = true;
 
-    noctalia-shell.enable = true;
+    # noctalia-shell = {
+    #   enable = true;
+    #   systemd.enable = true;
+    # };
 
     direnv = {
       enable = true;

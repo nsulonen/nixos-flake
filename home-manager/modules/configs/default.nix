@@ -4,6 +4,6 @@
   imports = [
     ./niri
     ./waybar
-    ./noctalia
+    # ./noctalia
   ];
 }
