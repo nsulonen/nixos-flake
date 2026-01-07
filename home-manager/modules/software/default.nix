@@ -5,7 +5,7 @@
 
   #home.packages
   home.packages = with pkgs; [
-    #knowledge management
+    #notes
     obsidian
 
     #tools
@@ -19,7 +19,6 @@
     #lsp
     nixd
     nil
-    python313Packages.python-lsp-server
 
     #file management
     nautilus
@@ -27,10 +26,6 @@
     #media player
     vlc
     
-    #screen recording
-    wf-recorder
-    slurp
-
   ];
 
   #programs
@@ -43,8 +38,6 @@
     distrobox.enable = true;
 
     zen-browser.enable = true;
-
-    freetube.enable = true;
 
     direnv = {
       enable = true;
@@ -100,7 +93,6 @@
       enable = true;
       enableFishIntegration = true;
       enableTransience = true;
-      # settings = pkgs.lib.importTOML ../configs/starship.toml;
     };
   };
 }
