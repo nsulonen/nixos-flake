@@ -46,10 +46,9 @@
 
     freetube.enable = true;
 
-    # noctalia-shell = {
-    #   enable = true;
-    #   systemd.enable = true;
-    # };
+    noctalia-shell = {
+      enable = true;
+    };
 
     direnv = {
       enable = true;

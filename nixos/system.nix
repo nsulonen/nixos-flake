@@ -55,8 +55,6 @@
     #login manager
     displayManager.ly.enable = true;
   };
-
-  services.noctalia-shell.enable = true;
   
   #graphics
   hardware.graphics = {

@@ -51,7 +51,6 @@
             stylix.nixosModules.stylix
             niri.nixosModules.niri
             home-manager.nixosModules.home-manager
-            noctalia.nixosModules.default
             {
               home-manager = {
                 useGlobalPkgs = false;
@@ -61,6 +60,7 @@
                   imports = [
                     ./home-manager/home.nix
                     zen-browser.homeModules.twilight
+                    noctalia.homeModules.default
                   ];
                 };
               };

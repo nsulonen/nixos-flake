@@ -14,34 +14,34 @@
   services.xserver.videoDrivers = [ "nvidia" ];
 
   #enable wlr portal for nvidia screencasting
-  xdg.portal = {
-    enable = true;
-    config = {
-      common = {
-        default = "wlr";
-      };
-    };
+  # xdg.portal = {
+  #   enable = true;
+  #   config = {
+  #     common = {
+  #       default = "wlr";
+  #     };
+  #   };
 
-    wlr = {
-      enable = true;
-      settings = {
-        screencast = {
-          force_mod_linear = true;
-        };
-      };
-    };
+  #   wlr = {
+  #     enable = true;
+  #     settings = {
+  #       screencast = {
+  #         force_mod_linear = true;
+  #       };
+  #     };
+  #   };
 
-    extraPortals = [
-      pkgs.xdg-desktop-portal-wlr
-    ];
+  #   extraPortals = [
+  #     pkgs.xdg-desktop-portal-wlr
+  #   ];
 
-  };
+  # };
 
-  environment.variables = {
-    GBM_BACKEND = "nvidia-drm";
-    __GLX_VENDOR_LIBRARY_NAME="nvidia";
-    WLR_BACKEND="vulkan";
-    LIBVA_DRIVER_NAME="nvidia";
-    NVD_BACKEND="direct";     
-  };
+  # environment.variables = {
+  #   GBM_BACKEND = "nvidia-drm";
+  #   __GLX_VENDOR_LIBRARY_NAME="nvidia";
+  #   WLR_BACKEND="vulkan";
+  #   LIBVA_DRIVER_NAME="nvidia";
+  #   NVD_BACKEND="direct";     
+  # };
 }
