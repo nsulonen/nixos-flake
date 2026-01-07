@@ -41,11 +41,30 @@
       ...
     }@inputs:
     let
+      systemSettings = {
+        system = "x86_64-linux";
+        hostname = "nixos";
+        timezone = "Europe/Helsinki";
+        locale = "en_US.UTF-8";
+        stateVersion = "25.05";
+      };
+
+      userSettings = {
+        username = "niko";
+        name = "nsulonen";
+        email = "niko.sulonen@proton.me";
+        dotfilesDir = "/home/niko/System";
+      };
+
       makeSystem =
         systemConfigFile:
         nixpkgs.lib.nixosSystem {
-          system = "x86_64-linux";
-          specialArgs = { inherit inputs; };
+          system = systemSettings.system;
+          specialArgs = {
+            inherit inputs;
+            inherit systemSettings;
+            inherit userSettings;
+          };
           modules = [
             systemConfigFile
             stylix.nixosModules.stylix
@@ -56,8 +75,12 @@
                 useGlobalPkgs = false;
                 useUserPackages = true;
                 backupFileExtension = "backup";
-                extraSpecialArgs = { inherit inputs; };
-                users.niko = {
+                extraSpecialArgs = {
+                  inherit inputs;
+                  inherit systemSettings;
+                  inherit userSettings;
+                };
+                users.${userSettings.username} = {
                   imports = [
                     ./home-manager/home.nix
                     zen-browser.homeModules.twilight

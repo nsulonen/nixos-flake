@@ -1,4 +1,4 @@
-{ pkgs, lib, ... }:
+{ pkgs, lib, systemSettings, userSettings, ... }:
 
 {
   imports = [
@@ -15,7 +15,7 @@
       "10.223.88.150" = [ "www.edu.samk.eu" ];
     };
 
-    hostName = lib.mkDefault "nixos";
+    hostName = lib.mkDefault systemSettings.hostname;
 
     networkmanager = {
       enable = true;
@@ -37,8 +37,8 @@
   };
 
   #locale
-  time.timeZone = "Europe/Helsinki";
-  i18n.defaultLocale = "en_US.UTF-8";
+  time.timeZone = systemSettings.timezone;
+  i18n.defaultLocale = systemSettings.locale;
   console = {
     font = "Lat2-Terminus16";
     useXkbConfig = true;
@@ -70,7 +70,7 @@
 
   #users
   users = {
-    users.niko = {
+    users.${userSettings.username} = {
       shell = pkgs.fish;
       isNormalUser = true;
       extraGroups = [ "wheel" ];
@@ -81,7 +81,7 @@
   nix.settings = {
     trusted-users = [
       "root"
-      "niko"
+      userSettings.username
     ];
     experimental-features = [
       "nix-command"
@@ -105,5 +105,5 @@
 
   nixpkgs.config.allowUnfree = true;
 
-  system.stateVersion = "25.05";
+  system.stateVersion = systemSettings.stateVersion;
 }

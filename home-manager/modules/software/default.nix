@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, userSettings, ... }:
 
 {
   nixpkgs.config.allowUnfree = true;
@@ -55,7 +55,7 @@
       enable = true;
       hosts = {
         "github.com" = {
-          user = "nsulonen";
+          user = userSettings.name;
         };
       };
     };
@@ -64,8 +64,8 @@
       enable = true;
       settings = {
         init.defaultBranch = "main";
-        user.name = "nsulonen";
-        user.email = "niko.sulonen@proton.me";
+        user.name = userSettings.name;
+        user.email = userSettings.email;
         core.editor = "hx";
       };
     };

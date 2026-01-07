@@ -1,4 +1,4 @@
-{ ... }:
+{ systemSettings, userSettings, ... }:
 
 {
   programs.home-manager = {
@@ -6,9 +6,9 @@
   };
 
   home = {
-    username = "niko";
-    homeDirectory = "/home/niko";
-    stateVersion = "25.05";
+    username = userSettings.username;
+    homeDirectory = "/home/" + userSettings.username;
+    stateVersion = systemSettings.stateVersion;
   };
 
   imports = [

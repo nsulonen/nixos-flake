@@ -1,4 +1,4 @@
-{ inputs, lib, osConfig, ... }:
+{ inputs, lib, osConfig, userSettings, ... }:
 let
   isLaptop = osConfig.networking.hostName == "laptop";
 in
@@ -77,7 +77,7 @@ in
         };
       };
       general = {
-        avatarImage = "~/System/home-manager/modules/noctalia/.face";
+        avatarImage = "${userSettings.dotfilesDir}/home-manager/modules/noctalia/.face";
         dimmerOpacity = 0.2;
         showScreenCorners = false;
         forceBlackScreenCorners = false;
