@@ -1,10 +1,6 @@
 { pkgs, lib, systemSettings, userSettings, ... }:
 
 {
-  imports = [
-    ./modules/samk.nix
-  ];
-
   #bootloader
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
@@ -19,21 +15,7 @@
 
     networkmanager = {
       enable = true;
-      plugins = with pkgs; [
-        networkmanager-openvpn
-      ];
     };
-
-  };
-
-  services = {
-    #lets vpn client to install its own DNS rules
-    resolved.enable = true;
-
-    dbus.packages = with pkgs; [
-      networkmanager
-      openvpn3
-    ];
   };
 
   #locale
@@ -99,7 +81,6 @@
     git
     vim
     wget
-    openvpn3
     linux-firmware
   ];
 

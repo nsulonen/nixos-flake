@@ -12,10 +12,9 @@
   };
 
   imports = [
-    ./modules/configs
-    ./modules/services
-    ./modules/software
-    ./modules/stylix
-    ./modules/noctalia
+    ../features/apps
+    ../features/noctalia
+    ../features/development
+    ../features/terminal
   ];
 }

@@ -55,15 +55,17 @@
         dotfilesDir = "/home/niko/System";
       };
 
+      pkgsArgs = {
+        inherit inputs;
+        inherit systemSettings;
+        inherit userSettings;
+      };
+
       makeSystem =
         systemConfigFile:
         nixpkgs.lib.nixosSystem {
           system = systemSettings.system;
-          specialArgs = {
-            inherit inputs;
-            inherit systemSettings;
-            inherit userSettings;
-          };
+          specialArgs = pkgsArgs;
           modules = [
             systemConfigFile
             stylix.nixosModules.stylix
@@ -74,11 +76,7 @@
                 useGlobalPkgs = false;
                 useUserPackages = true;
                 backupFileExtension = "backup";
-                extraSpecialArgs = {
-                  inherit inputs;
-                  inherit systemSettings;
-                  inherit userSettings;
-                };
+                extraSpecialArgs = pkgsArgs;
                 users.${userSettings.username} = {
                   imports = [
                     ./home-manager/home.nix

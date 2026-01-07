@@ -4,8 +4,9 @@
   imports = [
     ./hardware.nix
     ../system.nix
-    ../modules/niri.nix
-    ../modules/stylix.nix
+    ../../features/niri
+    ../../features/stylix
+    ../../features/vpn
   ];
 
   networking.hostName = "laptop";
