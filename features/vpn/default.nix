@@ -1,18 +1,25 @@
-{ pkgs, ... }:
+{ pkgs, lib, config, ... }:
 
+let
+  cfg = config.features.vpn;
+in
 {
-  programs.openvpn3.enable = true;
+  options.features.vpn.enable = lib.mkEnableOption "vpn services";
 
-  environment.systemPackages = [ pkgs.openvpn3 ];
+  config = lib.mkIf cfg.enable {
+    programs.openvpn3.enable = true;
 
-  networking.networkmanager = {
-    plugins = with pkgs; [ networkmanager-openvpn ];
+    environment.systemPackages = [ pkgs.openvpn3 ];
+
+    networking.networkmanager = {
+      plugins = with pkgs; [ networkmanager-openvpn ];
+    };
+
+    services.dbus.packages = with pkgs; [
+      networkmanager
+      openvpn3
+    ];
+
+    services.resolved.enable = true;
   };
-
-  services.dbus.packages = with pkgs; [
-    networkmanager
-    openvpn3
-  ];
-
-  services.resolved.enable = true;
 }

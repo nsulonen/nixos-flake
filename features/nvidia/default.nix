@@ -1,47 +1,22 @@
-{ config, pkgs, ... }:
+{ config, lib, pkgs, ... }:
 
+let
+  cfg = config.features.nvidia;
+in
 {
-  hardware.nvidia = {
-    modesetting.enable = true;
-    powerManagement.enable = true; # for system suspend to work
-    powerManagement.finegrained = false;
+  options.features.nvidia.enable = lib.mkEnableOption "nvidia drivers";
 
-    open = true;
+  config = lib.mkIf cfg.enable {
+    hardware.nvidia = {
+      modesetting.enable = true;
+      powerManagement.enable = true; # for system suspend to work
+      powerManagement.finegrained = false;
 
-    package = config.boot.kernelPackages.nvidiaPackages.latest;
+      open = true;
+
+      package = config.boot.kernelPackages.nvidiaPackages.latest;
+    };
+
+    services.xserver.videoDrivers = [ "nvidia" ];
   };
-
-  services.xserver.videoDrivers = [ "nvidia" ];
-
-  #enable wlr portal for nvidia screencasting
-  # xdg.portal = {
-  #   enable = true;
-  #   config = {
-  #     common = {
-  #       default = "wlr";
-  #     };
-  #   };
-
-  #   wlr = {
-  #     enable = true;
-  #     settings = {
-  #       screencast = {
-  #         force_mod_linear = true;
-  #       };
-  #     };
-  #   };
-
-  #   extraPortals = [
-  #     pkgs.xdg-desktop-portal-wlr
-  #   ];
-
-  # };
-
-  # environment.variables = {
-  #   GBM_BACKEND = "nvidia-drm";
-  #   __GLX_VENDOR_LIBRARY_NAME="nvidia";
-  #   WLR_BACKEND="vulkan";
-  #   LIBVA_DRIVER_NAME="nvidia";
-  #   NVD_BACKEND="direct";     
-  # };
 }

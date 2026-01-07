@@ -4,10 +4,18 @@
   imports = [
     ./hardware.nix
     ../system.nix
-    ../../features/niri
-    ../../features/stylix
-    ../../features/vpn
   ];
+
+  features = {
+    niri.enable = true;
+    stylix.enable = true;
+    vpn.enable = true;
+    apps.enable = true;
+    development.enable = true;
+    terminal.enable = true;
+    virtualization.enable = true;
+    noctalia.enable = true;
+  };
 
   networking.hostName = "laptop";
 

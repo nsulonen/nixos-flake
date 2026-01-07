@@ -1,36 +1,45 @@
-{ pkgs, ... }:
+{ pkgs, lib, config, userSettings, ... }:
 
+let
+  cfg = config.features.apps;
+in
 {
-  nixpkgs.config.allowUnfree = true;
+  options.features.apps.enable = lib.mkEnableOption "standard user apps";
 
-  home.packages = with pkgs; [
-    # Notes
-    obsidian
+  config = lib.mkIf cfg.enable {
+    nixpkgs.config.allowUnfree = true;
 
-    # Tools
-    xwayland-satellite
-    bottles
-    protontricks
-    protonup-qt
+    home-manager.users.${userSettings.username} = { ... }: {
+      home.packages = with pkgs; [
+        # Notes
+        obsidian
 
-    # File Management
-    nautilus
+        # Tools
+        xwayland-satellite
+        bottles
+        protontricks
+        protonup-qt
 
-    # Media Player
-    vlc
-  ];
+        # File Management
+        nautilus
 
-  programs = {
-    discord.enable = true;
-    zen-browser.enable = true;
-  };
+        # Media Player
+        vlc
+      ];
 
-  services = {
-    # Mako for Notifications
-    mako = {
-      enable = true;
+      programs = {
+        discord.enable = true;
+        zen-browser.enable = true;
+      };
+
+      services = {
+        # Mako for Notifications
+        mako = {
+          enable = true;
+        };
+      };
+
+      systemd.user.startServices = "sd-switch";
     };
   };
-
-  systemd.user.startServices = "sd-switch";
 }

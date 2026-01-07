@@ -1,58 +1,67 @@
-{ pkgs, userSettings, ... }:
+{ pkgs, lib, config, userSettings, ... }:
 
+let
+  cfg = config.features.development;
+in
 {
-  home.packages = with pkgs; [
-    # Search tools
-    ripgrep
-    fd
+  options.features.development.enable = lib.mkEnableOption "development tools";
 
-    # Git TUI
-    lazygit
+  config = lib.mkIf cfg.enable {
+    home-manager.users.${userSettings.username} = { ... }: {
+      home.packages = with pkgs; [
+        # Search tools
+        ripgrep
+        fd
 
-    # LSP
-    nixd
-    nil
+        # Git TUI
+        lazygit
 
-    # Development Environments
-    devenv
-  ];
+        # LSP
+        nixd
+        nil
 
-  programs = {
-    direnv = {
-      enable = true;
-      nix-direnv.enable = true;
-    };
+        # Development Environments
+        devenv
+      ];
 
-    gh = {
-      enable = true;
-      hosts = {
-        "github.com" = {
-          user = userSettings.name;
+      programs = {
+        direnv = {
+          enable = true;
+          nix-direnv.enable = true;
         };
-      };
-    };
 
-    git = {
-      enable = true;
-      settings = {
-        init.defaultBranch = "main";
-        user.name = userSettings.name;
-        user.email = userSettings.email;
-        core.editor = "hx";
-      };
-    };
-
-    helix = {
-      enable = true;
-      settings = {
-        editor = {
-          line-number = "relative";
-          lsp.display-messages = true;
-          soft-wrap.enable = true;
+        gh = {
+          enable = true;
+          hosts = {
+            "github.com" = {
+              user = userSettings.name;
+            };
+          };
         };
-        keys.normal = {
-          space.w = ":w";
-          space.q = ":q";
+
+        git = {
+          enable = true;
+          settings = {
+            init.defaultBranch = "main";
+            user.name = userSettings.name;
+            user.email = userSettings.email;
+            core.editor = "hx";
+          };
+        };
+
+        helix = {
+          enable = true;
+          settings = {
+            editor = {
+              line-number = "relative";
+              lsp.display-messages = true;
+              soft-wrap.enable = true;
+            };
+            keys.normal = {
+              space.w = ":w";
+              space.q = ":q";
+            };
+          };
         };
       };
     };

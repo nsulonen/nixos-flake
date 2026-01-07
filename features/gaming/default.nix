@@ -1,13 +1,19 @@
-{ ... }:
+{ config, lib, ... }:
 
+let
+  cfg = config.features.gaming;
+in
 {
-  programs = {
+  options.features.gaming.enable = lib.mkEnableOption "gaming features";
 
-    steam = {
-      enable = true;
-      gamescopeSession.enable = true;
+  config = lib.mkIf cfg.enable {
+    programs = {
+      steam = {
+        enable = true;
+        gamescopeSession.enable = true;
+      };
+
+      gamemode.enable = true;
     };
-
-		gamemode.enable = true;
-	};
+  };
 }

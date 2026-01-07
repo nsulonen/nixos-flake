@@ -1,28 +1,37 @@
-{ pkgs, ... }:
+{ pkgs, lib, config, userSettings, ... }:
 
+let
+  cfg = config.features.terminal;
+in
 {
-  home.packages = with pkgs; [
-    wl-clipboard
-  ];
+  options.features.terminal.enable = lib.mkEnableOption "terminal tools";
 
-  programs = {
-    fish.enable = true;
+  config = lib.mkIf cfg.enable {
+    home-manager.users.${userSettings.username} = { ... }: {
+      home.packages = with pkgs; [
+        wl-clipboard
+      ];
 
-    alacritty = {
-      enable = true;
-      settings = {
-        window.padding.x = 5;
+      programs = {
+        fish.enable = true;
+
+        alacritty = {
+          enable = true;
+          settings = {
+            window.padding.x = 5;
+          };
+        };
+
+        gemini-cli = {
+          enable = true;
+        };
+
+        starship = {
+          enable = true;
+          enableFishIntegration = true;
+          enableTransience = true;
+        };
       };
-    };
-
-    gemini-cli = {
-      enable = true;
-    };
-
-    starship = {
-      enable = true;
-      enableFishIntegration = true;
-      enableTransience = true;
     };
   };
 }

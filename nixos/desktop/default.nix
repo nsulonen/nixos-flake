@@ -4,12 +4,20 @@
   imports = [
     ./hardware.nix
     ../system.nix
-    ../../features/niri
-    ../../features/nvidia
-    ../../features/gaming
-    ../../features/vpn
-    ../../features/stylix
   ];
+
+  features = {
+    niri.enable = true;
+    nvidia.enable = true;
+    gaming.enable = true;
+    vpn.enable = true;
+    stylix.enable = true;
+    apps.enable = true;
+    development.enable = true;
+    terminal.enable = true;
+    virtualization.enable = true;
+    noctalia.enable = true;
+  };
 
   networking.hostName = "desktop";
 

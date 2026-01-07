@@ -68,6 +68,7 @@
           specialArgs = pkgsArgs;
           modules = [
             systemConfigFile
+            ./features
             stylix.nixosModules.stylix
             niri.nixosModules.niri
             home-manager.nixosModules.home-manager

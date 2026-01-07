@@ -12,9 +12,5 @@
   };
 
   imports = [
-    ../features/apps
-    ../features/noctalia
-    ../features/development
-    ../features/terminal
   ];
 }
