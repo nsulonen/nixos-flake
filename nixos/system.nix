@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, lib, ... }:
 
 {
   imports = [
@@ -15,7 +15,7 @@
       "10.223.88.150" = [ "www.edu.samk.eu" ];
     };
 
-    hostName = "nixos";
+    hostName = lib.mkDefault "nixos";
 
     networkmanager = {
       enable = true;

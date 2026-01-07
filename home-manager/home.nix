@@ -16,5 +16,6 @@
     ./modules/services
     ./modules/software
     ./modules/stylix
+    ./modules/noctalia
   ];
 }

@@ -8,6 +8,8 @@
     ../modules/stylix.nix
   ];
 
+  networking.hostName = "laptop";
+
   #for cpu temp control
   boot.kernelParams = [ "amd_pstate=guided" ];
   powerManagement.enable = true;

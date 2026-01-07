@@ -10,6 +10,8 @@
     ../modules/stylix.nix
   ];
 
+  networking.hostName = "desktop";
+
   hardware.logitech = {
     wireless = {
       enable = true;

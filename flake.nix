@@ -56,11 +56,11 @@
                 useGlobalPkgs = false;
                 useUserPackages = true;
                 backupFileExtension = "backup";
+                extraSpecialArgs = { inherit inputs; };
                 users.niko = {
                   imports = [
                     ./home-manager/home.nix
                     zen-browser.homeModules.twilight
-                    noctalia.homeModules.default
                   ];
                 };
               };
