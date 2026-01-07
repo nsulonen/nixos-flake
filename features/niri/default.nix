@@ -1,4 +1,4 @@
-{ pkgs, lib, config, userSettings, inputs, ... }:
+{ lib, config, userSettings, inputs, ... }:
 
 let
   cfg = config.features.niri;
@@ -95,7 +95,7 @@ in
           shadow.enable = true;
 
           # for stationary wallpaper in overview
-          background-color = "transparent";
+          background-color = "#0b0e14";
         };
 
         layer-rules = [
@@ -111,6 +111,7 @@ in
           workspace-shadow = {
             enable = false;
           };
+          backdrop-color = "#0b0e14";
         };
 
         spawn-at-startup = [
