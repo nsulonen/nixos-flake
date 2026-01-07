@@ -1,9 +1,11 @@
-{ pkgs, lib, config, userSettings, ... }:
+{ pkgs, lib, config, userSettings, inputs, ... }:
 
 let
   cfg = config.features.niri;
 in
 {
+  imports = [ inputs.niri.nixosModules.niri ];
+
   options.features.niri.enable = lib.mkEnableOption "niri window manager";
 
   config = lib.mkIf cfg.enable {

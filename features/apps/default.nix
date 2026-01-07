@@ -1,4 +1,4 @@
-{ pkgs, lib, config, userSettings, ... }:
+{ pkgs, lib, config, userSettings, inputs, ... }:
 
 let
   cfg = config.features.apps;
@@ -10,6 +10,8 @@ in
     nixpkgs.config.allowUnfree = true;
 
     home-manager.users.${userSettings.username} = { ... }: {
+      imports = [ inputs.zen-browser.homeModules.twilight ];
+
       home.packages = with pkgs; [
         # Notes
         obsidian

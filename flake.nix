@@ -69,8 +69,6 @@
           modules = [
             systemConfigFile
             ./features
-            stylix.nixosModules.stylix
-            niri.nixosModules.niri
             home-manager.nixosModules.home-manager
             {
               home-manager = {
@@ -81,7 +79,6 @@
                 users.${userSettings.username} = {
                   imports = [
                     ./home-manager/home.nix
-                    zen-browser.homeModules.twilight
                   ];
                 };
               };

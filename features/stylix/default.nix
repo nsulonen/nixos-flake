@@ -1,9 +1,11 @@
-{ pkgs, lib, config, userSettings, ... }:
+{ pkgs, lib, config, userSettings, inputs, ... }:
 
 let
   cfg = config.features.stylix;
 in
 {
+  imports = [ inputs.stylix.nixosModules.stylix ];
+
   options.features.stylix.enable = lib.mkEnableOption "stylix appearance";
 
   config = lib.mkIf cfg.enable {
