@@ -22,10 +22,10 @@ in
             monitors = [ ];
             density = "default";
             showOutline = false;
-            showCapsule = true;
+            showCapsule = false;
             capsuleOpacity = 1;
-            backgroundOpacity = 0.93;
-            useSeparateOpacity = false;
+            backgroundOpacity = 1;
+            useSeparateOpacity = true;
             floating = false;
             marginVertical = 0.25;
             marginHorizontal = 0.25;
@@ -33,35 +33,9 @@ in
             exclusive = true;
             widgets = {
               left = [
-                # {
-                #   id = "Launcher";
-                # }
                 {
                   id = "Clock";
-                }
-                {
-                  id = "SystemMonitor";
-                }
-              ] ++ lib.optionals isLaptop [
-                {
-                  id = "Battery";
-                }
-              ] ++  lib.optionals isLaptop [
-                {
-                  id = "Brightness";
-                }
-              ];          
-              center = [
-                {
-                  id = "Workspace";
-                }
-              ];
-              right = [
-                # {
-                #   id = "ScreenRecorder";
-                # }
-                {
-                  id = "Tray";
+                  formatVertical = "HH mm";
                 }
                 {
                   id = "NotificationHistory";
@@ -70,9 +44,41 @@ in
                 {
                   id = "Volume";
                 }
-            ];
+              ] ++  lib.optionals isLaptop [
+                {
+                  id = "Brightness";
+                }
+              ] ++ [          
+                {
+                  id = "Tray";
+                  drawerEnabled = false;
+                  blacklist = [ "indicator-solaar" ];
+                }
+              ];
+              center = [
+                {
+                  id = "Workspace";
+                  labelMode = "none";
+                }
+              ];
+              right = [
+                # {
+                #   id = "ScreenRecorder";
+                # }
+              ] ++ lib.optionals isLaptop [
+                {
+                  id = "Battery";
+                }
+              ] ++ [
+                {
+                  id = "SystemMonitor";
+                  # compactMode = true;
+                  # showMemoryAsPercent = true;
+                  # showDiskUsage = true;
+                }
+              ];
+            };
           };
-        };
           general = {
             avatarImage = "${userSettings.dotfilesDir}/features/noctalia/.face";
             dimmerOpacity = 0.2;
@@ -353,7 +359,7 @@ in
           notifications = {
             enabled = true;
             monitors = [ ];
-            location = "top_right";
+            location = "top_left";
             overlayLayer = true;
             backgroundOpacity = 1;
             respectExpireTimeout = false;

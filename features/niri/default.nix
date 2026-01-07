@@ -72,6 +72,13 @@ in
         layout = {
 
           gaps = 16;
+          struts = {
+            left = -1;
+            right = -1;
+            # top= -16;
+            # bottom = -16;
+          };
+          
           always-center-single-column = true;
           center-focused-column = "never";
 
@@ -90,6 +97,9 @@ in
           border = {
             enable = true;
             width = 1.0;
+            active = {
+            color = "#bfbdb6";
+            };
           };
 
           shadow.enable = true;
@@ -147,12 +157,12 @@ in
 
         window-rules = [
           {
-            geometry-corner-radius = {
-              top-left = 8.0;
-              top-right = 8.0;
-              bottom-right = 8.0;
-              bottom-left = 8.0;
-            };
+            # geometry-corner-radius = {
+            #   top-left = 8.0;
+            #   top-right = 8.0;
+            #   bottom-right = 8.0;
+            #   bottom-left = 8.0;
+            # };
             clip-to-geometry = true;
             draw-border-with-background = false;
           }
