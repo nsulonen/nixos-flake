@@ -36,13 +36,15 @@ in
             {
               id = "SystemMonitor";
             }
-            # {
-            #   id = "ActiveWindow";
-            # }
-            # {
-            #   id = "MediaMini";
-            # }
-          ];
+          ] ++ lib.optionals isLaptop [
+            {
+              id = "Battery";
+            }
+          ] ++  lib.optionals isLaptop [
+            {
+              id = "Brightness";
+            }
+          ];          
           center = [
             {
               id = "Workspace";
@@ -58,23 +60,11 @@ in
             {
               id = "NotificationHistory";
             }
-          ] ++ lib.optionals isLaptop [
-            {
-              id = "Battery";
-            }
-          ] ++ [
+
             {
               id = "Volume";
             }
-          ] ++ lib.optionals isLaptop [
-            {
-              id = "Brightness";
-            }
-          ];
-            # {
-            #   id = "ControlCenter";
-            # }
-        };
+        ];
       };
       general = {
         avatarImage = "${userSettings.dotfilesDir}/home-manager/modules/noctalia/.face";
