@@ -98,11 +98,14 @@ in
             enable = true;
             width = 1.0;
             active = {
-            color = "#bfbdb6";
+              color = "#3e4b59";
+            };
+            inactive = {
+              color = "rgba(0 0 0 0)";
             };
           };
 
-          shadow.enable = true;
+          shadow.enable = false;
 
           # for stationary wallpaper in overview
           background-color = "#0b0e14";
