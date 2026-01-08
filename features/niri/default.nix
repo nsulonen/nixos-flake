@@ -71,10 +71,10 @@ in
 
         layout = {
 
-          gaps = 16;
+          gaps = 0;
           struts = {
-            left = -1;
-            right = -1;
+            # left = -1;
+            # right = -1;
             # top= -16;
             # bottom = -16;
           };

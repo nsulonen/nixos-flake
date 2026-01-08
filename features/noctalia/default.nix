@@ -18,7 +18,7 @@ in
         settings = lib.mkForce {
           settingsVersion = 0;
           bar = {
-            position = "right";
+            position = "left";
             monitors = [ ];
             density = "default";
             showOutline = false;
