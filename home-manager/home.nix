@@ -10,7 +10,4 @@
     homeDirectory = "/home/" + userSettings.username;
     stateVersion = systemSettings.stateVersion;
   };
-
-  imports = [
-  ];
 }
