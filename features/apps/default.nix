@@ -7,7 +7,7 @@ in
   options.features.apps.enable = lib.mkEnableOption "standard user apps";
 
   config = lib.mkIf cfg.enable {
-    nixpkgs.config.allowUnfree = true;
+    services.flatpak.enable = true;
 
     home-manager.users.${userSettings.username} = { ... }: {
       imports = [ inputs.zen-browser.homeModules.twilight ];
