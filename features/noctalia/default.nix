@@ -44,11 +44,6 @@ in
                 {
                   id = "Volume";
                 }
-              ] ++  lib.optionals isLaptop [
-                {
-                  id = "Brightness";
-                }
-              ] ++ [          
                 {
                   id = "Tray";
                   drawerEnabled = false;
@@ -62,9 +57,6 @@ in
                 }
               ];
               right = [
-                # {
-                #   id = "ScreenRecorder";
-                # }
               ] ++ lib.optionals isLaptop [
                 {
                   id = "Battery";
