@@ -37,6 +37,11 @@ in
                   id = "Clock";
                   formatVertical = "HH mm";
                 }
+              ] ++ lib.optionals isLaptop [
+                {
+                  id = "Battery";
+                }
+              ] ++ [
                 {
                   id = "NotificationHistory";
                 }
@@ -57,11 +62,6 @@ in
                 }
               ];
               right = [
-              ] ++ lib.optionals isLaptop [
-                {
-                  id = "Battery";
-                }
-              ] ++ [
                 {
                   id = "SystemMonitor";
                   # compactMode = true;
