@@ -27,6 +27,9 @@ in
 
         # Media Player
         vlc
+
+        # Python
+        python3
       ];
 
       programs = {
