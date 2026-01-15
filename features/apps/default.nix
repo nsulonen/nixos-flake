@@ -30,6 +30,9 @@ in
 
         # Python
         python3
+
+        # IDE
+        jetbrains.clion
       ];
 
       programs = {
