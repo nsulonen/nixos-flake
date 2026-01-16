@@ -50,8 +50,10 @@
 
       userSettings = {
         username = "niko";
+        # ---- THESE ARE FOR GIT ----
         name = "nsulonen";
         email = "niko.sulonen@proton.me";
+        # ---------------------------
         dotfilesDir = "/home/niko/System";
       };
 
