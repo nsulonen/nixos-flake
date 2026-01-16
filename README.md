@@ -71,4 +71,4 @@ sudo nixos-rebuild switch --flake .#laptop
 
 ## User Configuration
 
-The system is configured for the user `niko` by default. User-specific settings (username, email, dotfiles location) are defined in the `userSettings` block within `flake.nix`.
+The system is configured for me `niko` by default. You can define your own user-specific settings (username, email, dotfiles location) in the `userSettings` block within `flake.nix`.
