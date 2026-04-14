@@ -37,6 +37,12 @@
     #login manager
     displayManager.ly.enable = true;
   };
+
+  xdg.portal = {
+    enable = true;
+    extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
+    config.common.default = [ "gtk" ];
+  }
   
   #graphics
   hardware.graphics = {
