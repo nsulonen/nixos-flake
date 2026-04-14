@@ -45,7 +45,7 @@
         hostname = "nixos";
         timezone = "Europe/Helsinki";
         locale = "en_US.UTF-8";
-        stateVersion = "25.05";
+        stateVersion = "26.05";
       };
 
       userSettings = {
