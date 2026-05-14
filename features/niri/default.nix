@@ -60,11 +60,12 @@ in
           "DP-3" = {
             enable = true;
             scale = 1.0;
-            transform.rotation = 270;
+            # transform.rotation = 270;
 
             position = {
               x = -1080;
-              y = -240;
+              y = 240;
+              # y = -240;
             };
           };
         };
