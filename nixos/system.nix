@@ -97,6 +97,9 @@
       openldap = prev.openldap.overrideAttrs (oldAttrs: {
         doCheck = false;
       });
+      xdg-desktop-portal = prev.xdg-desktop-portal.overrideAttrs (oldAttrs: {
+        doCheck = false;
+      });
     })
   ];
 
