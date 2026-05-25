@@ -9,6 +9,11 @@ in
   config = lib.mkIf cfg.enable {
     services.flatpak.enable = true;
 
+    programs.appimage = {
+      enable = true;
+      binfmt = true;
+    };
+
     home-manager.users.${userSettings.username} = { ... }: {
       imports = [ inputs.zen-browser.homeModules.twilight ];
 
