@@ -1,4 +1,4 @@
-{ config, lib, ... }:
+{ config, lib, pkgs, ... }:
 
 let
   cfg = config.features.gaming;
@@ -15,5 +15,18 @@ in
 
       gamemode.enable = true;
     };
+
+    environment.systemPackages = with pkgs; [
+      gawk
+      procps
+      unzip
+      xdotool
+      xprop
+      xrandr
+      xwininfo
+      xxd
+      yad
+      steamtinkerlaunch
+    ];
   };
 }
