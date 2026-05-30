@@ -36,7 +36,8 @@ This configuration is built around a modular architecture defined in the `featur
 │   └── laptop/           # Laptop configuration entry
 ├── home-manager/         # Base Home Manager configuration
 └── features/             # Modular feature definitions
-    ├── apps/             # User applications (Flatpak, Zen, Obsidian...)
+    ├── apps/             # User applications (Zen, Obsidian...)
+    ├── flatpak/          # Flatpak support and Flathub repository
     ├── development/      # Dev tools (git, helix, direnv...)
     ├── gaming/           # Steam & gaming tools
     ├── niri/             # Window manager configuration

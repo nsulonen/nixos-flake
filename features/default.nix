@@ -3,6 +3,7 @@
 {
   imports = [
     ./apps
+    ./flatpak
     ./development
     ./gaming
     ./niri

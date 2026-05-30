@@ -7,8 +7,6 @@ in
   options.features.apps.enable = lib.mkEnableOption "standard user apps";
 
   config = lib.mkIf cfg.enable {
-    services.flatpak.enable = true;
-
     programs.appimage = {
       enable = true;
       binfmt = true;

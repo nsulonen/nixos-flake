@@ -12,6 +12,7 @@
     gaming.enable = true;
     vpn.enable = true;
     stylix.enable = true;
+    flatpak.enable = true;
     apps.enable = true;
     development.enable = true;
     terminal.enable = true;

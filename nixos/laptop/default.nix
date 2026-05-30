@@ -10,6 +10,7 @@
     niri.enable = true;
     stylix.enable = true;
     vpn.enable = true;
+    flatpak.enable = true;
     apps.enable = true;
     development.enable = true;
     terminal.enable = true;
